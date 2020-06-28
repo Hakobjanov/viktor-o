@@ -7,44 +7,47 @@
     <meta name="robots" content="index, follow" />
     <link rel="icon" href="icons/rent.svg" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,100;1,300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption&family=PT+Serif+Caption&family=Roboto:wght@100;300;400;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles/fonts.css" />
     <link rel="stylesheet" href="styles/style.css" />
     <title>Ostapchuk apartment project</title>
   </head>
-  <body class="container">
+  <body>
     <div class="contacts">
-      <a class="phone" href="tel:380673621323">+38 (067) 362-13-23</a>
-      <a class="email" href="#">janov@gmail.com</a>
+      <div class="contacts-inner container">
+        <a class="phone" href="tel:380673621323">+38 (067) 555-55-55</a>
+        <a class="email" href="#">vik@gmail.com</a>
+      </div>
     </div>
     <header class="header">
-      <nav class="nav">
+      <nav class="nav container">
         <div class="nav-logo">
-          <h1 class="logo">
-            <a href="#" class="logo-img">
-              <img src="icons/rent.svg" alt="rental logo" />
-              Viktor
-            </a>
-          </h1>
+          <a href="#" class="logo"> Viktor&copy;<span class="dot">.</span> </a>
         </div>
         <ul class="nav-menu">
-          <li><a href="#" class="menu-link">Menu</a></li>
-          <li><a href="#" class="menu-link">Menu</a></li>
-          <li><a href="#" class="menu-link">Menu</a></li>
-          <li><a href="#" class="menu-link">Menu</a></li>
+          <li><a href="#" class="menu-link">Покупка</a></li>
+          <li><a href="#" class="menu-link">Продажа</a></li>
+          <li><a href="#" class="menu-link">Аренда</a></li>
+          <li><a href="#" class="menu-link">Управление недвижемостью</a></li>
         </ul>
 
-        <div class="blog-contacts">
-          contacts & blog
+        <div class="blog">
+          <img class="blog-logo" src="./icons/blog.svg" alt="" />
+          blog<span class="dot">.</span>
         </div>
       </nav>
     </header>
 
-    <main class="main">
+    <main class="main container">
       <section class="main-slider">
-        <div class="slider-one">Для покупателей</div>
+        <div class="slider-one">
+          Для покупателей
+          <div class="more">
+            more info here
+          </div>
+        </div>
         <div class="slider-two">Для продавцов</div>
         <div class="slider-three">Для арендаторов</div>
       </section>

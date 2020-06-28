@@ -13,8 +13,93 @@ a {
   text-decoration: none;
 }
 
+.container {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/*contacts styles*/
+.contacts {
+  background-color: rgb(3, 3, 3);
+
+  position: sticky;
+  top: 0;
+  padding: 10px 0;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.65);
+}
+
+.contacts-inner {
+  display: flex;
+  justify-content: space-between;
+}
+.phone,
+.email {
+  position: relative;
+  color: antiquewhite;
+
+  letter-spacing: 0.25px;
+  line-height: 25px;
+  padding-left: 25px;
+  font-family: "PT Sans Caption", sans-serif;
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.phone {
+  padding-left: 30px;
+}
+
+.phone:hover,
+.email:hover {
+  color: #fdd03b;
+  text-decoration: underline;
+}
+
+.phone:before {
+  position: absolute;
+  left: 2px;
+  font-family: "icomoon";
+  content: "\f095";
+  color: #fdd03b;
+  font-size: 30px;
+}
+
+.email:before {
+  position: absolute;
+  left: -10px;
+  font-family: "icomoon";
+  content: "\f003";
+  color: #fdd03b;
+  font-size: 30px;
+}
+
+/*header styles*/
+.header {
+  background-color: rgb(3, 3, 3);
+  box-shadow: 0 5px 5px 3px rgba(230, 230, 230, 0.7);
+  padding: 15px 0;
+}
+
 ul {
+  font-family: "PT Sans Caption", sans-serif;
+  text-transform: uppercase;
   list-style-type: none;
+}
+
+.logo {
+  font-family: "PT Serif Caption", serif;
+  text-transform: uppercase;
+  list-style-type: none;
+  color: antiquewhite;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.dot {
+  color: #fdd03b;
 }
 
 .logo-img img {
@@ -22,68 +107,64 @@ ul {
   height: 30px;
 }
 
-.container {
-  max-width: 1170px;
-  padding: 0 15px;
-  margin: 0 auto;
-}
-
-.header {
-  height: 10vh;
-}
-
-.contacts {
-  display: flex;
-  justify-content: space-between;
-  background-color: rgba(94, 94, 94, 0.8);
-  height: 4vh;
-  position: sticky;
-  top: 0;
-  border: 1px solid black;
-}
-
-.phone,
-.email {
-  position: relative;
-  color: rgb(0, 0, 0);
-  letter-spacing: 0.25px;
-  line-height: 25px;
-  padding-left: 25px;
-}
-.phone:before {
-  position: absolute;
-  left: 5px;
-  font-family: "icomoon";
-  content: "\f095";
-  color: #e41f29;
-  font-size: 30px;
-}
-
-.email:before {
-  position: absolute;
-  left: -8px;
-  font-family: "icomoon";
-  content: "\f003";
-  color: #e41f29;
-  font-size: 30px;
-}
-
 .nav {
-  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border: 1px solid black;
-  background: rgb(221, 221, 221);
 }
 
 .nav-menu {
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  margin-right: 100px;
 }
 
 .menu-link {
   margin: 0 25px;
+  color: antiquewhite;
+  text-transform: capitalize;
+  position: relative;
+}
+
+.nav-logo:after,
+.blog:after,
+.menu-link:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #fdd03b;
+  position: absolute;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+  bottom: -2px;
+  transform-origin: right;
+}
+.nav-logo:hover,
+.nav-logo:hover:after,
+.blog:hover,
+.blog:hover:after,
+.menu-link:hover,
+.menu-link:hover:after {
+  transform: scaleX(1);
+  color: white;
+}
+
+.blog {
+  color: antiquewhite;
+  text-transform: uppercase;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+}
+
+.blog-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
 }
 
 .main-slider {
@@ -98,21 +179,39 @@ ul {
 .slider-one,
 .slider-three,
 .slider-two {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   width: 33.33%;
   height: 100%;
   border: 1px solid #000;
   margin: 2px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
 }
 
 .slider-one {
-  background-color: rgb(132, 230, 230);
+  background-image: url(../images/abstract-architectural-design-architecture-building-136419.jpg);
 }
 .slider-two {
-  background-color: rgb(185, 72, 72);
+  background-image: url(../images/interior-design-of-a-house-1571460.jpg);
 }
 
 .slider-three {
-  background-color: rgb(250, 109, 250);
+  background-image: url(../images/apartment-architecture-balcony-buildings-280212.jpg);
+}
+
+.more {
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.5s;
+}
+
+.slider-one:hover .more {
+  transform: scaleY(1);
 }
 
 .news {
